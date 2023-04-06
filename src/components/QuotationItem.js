@@ -3,7 +3,7 @@ import React from 'react'
 // import images from '../img/bitcoin.png'
 import styles from '../styles/QuotationItem.style'
 
-const QuotationItem = () => {
+const QuotationItem = ({ valor, data }) => {
   return (
     <View style={styles.mainContent}>
 
@@ -13,12 +13,12 @@ const QuotationItem = () => {
             style={styles.logoBitcoin}
             source={require('../img/bitcoin.png')}
           />
-          <Text style={styles.dayCotation}>06/04/23</Text>
+          <Text style={styles.dayCotation}>{data}</Text>
         </View>
       </View>
 
       <View style={styles.contextRigth}>
-        <Text style={styles.priceRigth}>5333,11</Text>
+        <Text style={styles.priceRigth}>{valor}</Text>
       </View>
 
     </View>
